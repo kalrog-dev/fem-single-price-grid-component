@@ -38,16 +38,20 @@
 
 /* General */
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   font-family: var(--ff);
   color: hsl( var(--clr-neutral-400) );
   background-color: hsl( var(--clr-neutral-500) );
   font-size: var(--fs-200);
   line-height: 1.6;
-  padding: 4em 2em;
 }
 
 .grid-container {
   display: grid;
+  width: 83%;
 }
 
 section {
@@ -66,6 +70,12 @@ section {
   padding: 0.9em 2.1em;
   border-radius: 5px;
   box-shadow: 0 10px 10px hsl(0 0% 0% / 0.1);
+  transition: background-color 0.1s, color 0.1s;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: hsl( var(--clr-accent) / 0.8 );
 }
 
 /* Typography */
@@ -77,6 +87,7 @@ section {
 
 .header__subtitle {
   color: hsl( var(--clr-accent) );
+  font-size: var(--fs-300);
   font-weight: bold;
   line-height: 1.35;
 }
@@ -153,3 +164,29 @@ section {
 }
 
 /* Media queries */
+@media (min-width: 578px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    max-width: 635px;
+  }
+
+  section {
+    padding: 2.5em;
+  }
+
+  .header {
+    grid-column: span 2;
+  }
+
+  .header__title {
+    font-size: 1.5rem;
+  }
+  
+  .header__subtitle {
+    font-size: var(--fs-500);
+  }
+  
+  .header__body {
+    font-size: var(--fs-400);
+  }
+}
