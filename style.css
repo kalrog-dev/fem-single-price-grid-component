@@ -16,9 +16,15 @@
 :root {
   --clr-primary: 179 62% 43%;
   --clr-accent: 71 73% 54%;
-  --clr-neutral-500: 218 22% 67%;
+  --clr-neutral-600: 218 22% 67%;
+  --clr-neutral-500: 204 43% 93%;
   --clr-neutral-400: 0 0% 100%;
   --ff: "Karla", sans-serif;
+  --fs-600: 1.25rem;      /* h1 */
+  --fs-500: 1.125rem;     /* h2 */
+  --fs-400: 1rem;         /* sub body, btn */
+  --fs-300: 0.9375rem;    /* h1 subtitle */
+  --fs-200: 0.875rem;     /* p */
 }
 
 /* Reset */
@@ -34,43 +40,116 @@
 body {
   font-family: var(--ff);
   color: hsl( var(--clr-neutral-400) );
+  background-color: hsl( var(--clr-neutral-500) );
+  font-size: var(--fs-200);
+  line-height: 1.6;
+  padding: 4em 2em;
 }
 
 .grid-container {
   display: grid;
 }
 
+section {
+  padding: 1.5em;
+}
+
 /* Buttons */
 .btn {
-  display: inline-block;
+  display: block;
+  text-align: center;
   font-family: inherit;
+  font-weight: 700;
   color: inherit;
   background-color: hsl( var(--clr-accent) );
   text-decoration: none;
-  padding: 1em 2.1em;
+  padding: 0.9em 2.1em;
   border-radius: 5px;
+  box-shadow: 0 10px 10px hsl(0 0% 0% / 0.1);
 }
 
 /* Typography */
 .header__title {
   color: hsl( var(--clr-primary) );
+  font-size: var(--fs-600);
+  line-height: 1.15;
 }
 
 .header__subtitle {
   color: hsl( var(--clr-accent) );
+  font-weight: bold;
+  line-height: 1.35;
 }
 
 .header__body {
-  color: hsl( var(--clr-neutral-500) );
+  color: hsl( var(--clr-neutral-600) );
+  line-height: 1.85;
+}
+
+.subscription {
+  font-size: var(--fs-400);
+}
+
+.subscription__cost {
+  font-size: 2em;
+}
+
+.subscription__title,
+.about__title {
+  font-size: var(--fs-500);
+  line-height: 1.15;
 }
 
 /* Layout */
+.header {
+  background-color: hsl( var(--clr-neutral-400) );
+  border-radius: 5px 5px 0 0;
+  padding-bottom: 2.25em;
+}
+
+.header__title {
+  margin-bottom: 1.25em;
+}
+
+.header__subtitle {
+  margin-bottom: 1.15em;
+}
+
 .subscription {
   background-color: hsl( var(--clr-primary) );
 }
 
+.subscription__title,
+.about__title {
+  margin-bottom: 1em;
+}
+
+.subscription__pricing {
+  display: flex;
+  align-items: center;
+}
+
+.subscription__interval {
+  margin-left: 0.75em;
+  opacity: 0.5;
+}
+
+.subscription__body {
+  margin-bottom: 1.625em;
+}
+
 .about {
   background-color: hsl( var(--clr-primary) / 0.85 );
+  border-radius: 0 0 5px 5px;
+}
+
+.about__list {
+  list-style: none;
+}
+
+.about__list > li {
+  line-height: 1.4;
+  opacity: 0.75;
 }
 
 /* Media queries */
