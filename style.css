@@ -168,6 +168,7 @@ section {
   .grid-container {
     grid-template-columns: 1fr 1fr;
     max-width: 635px;
+    max-height: 475px;
   }
 
   section {
