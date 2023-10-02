@@ -1,3 +1,27 @@
+/* Fonts */
+@font-face {
+  font-family: "Karla";
+  font-weight: 400;
+  src: url("./fonts/Karla-Regular.ttf");
+  
+}
+
+@font-face {
+  font-family: "Karla";
+  font-weight: 700;
+  src: url("./fonts/Karla-Bold.ttf");
+}
+
+/* Variables */
+:root {
+  --clr-primary: 179 62% 43%;
+  --clr-accent: 71 73% 54%;
+  --clr-neutral-500: 218 22% 67%;
+  --clr-neutral-400: 0 0% 100%;
+  --ff: "Karla", sans-serif;
+}
+
+/* Reset */
 *,
 *::before,
 *::after {
@@ -5,3 +29,48 @@
   margin: 0;
   padding: 0;
 }
+
+/* General */
+body {
+  font-family: var(--ff);
+  color: hsl( var(--clr-neutral-400) );
+}
+
+.grid-container {
+  display: grid;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-family: inherit;
+  color: inherit;
+  background-color: hsl( var(--clr-accent) );
+  text-decoration: none;
+  padding: 1em 2.1em;
+  border-radius: 5px;
+}
+
+/* Typography */
+.header__title {
+  color: hsl( var(--clr-primary) );
+}
+
+.header__subtitle {
+  color: hsl( var(--clr-accent) );
+}
+
+.header__body {
+  color: hsl( var(--clr-neutral-500) );
+}
+
+/* Layout */
+.subscription {
+  background-color: hsl( var(--clr-primary) );
+}
+
+.about {
+  background-color: hsl( var(--clr-primary) / 0.85 );
+}
+
+/* Media queries */
