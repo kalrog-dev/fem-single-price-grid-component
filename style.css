@@ -176,6 +176,7 @@ section {
 
   .header {
     grid-column: span 2;
+    border-radius: 8px 8px 0 0;
   }
 
   .header__title {
@@ -188,5 +189,13 @@ section {
   
   .header__body {
     font-size: var(--fs-400);
+  }
+
+  .subscription {
+    border-radius: 0 0 0 8px;
+  }
+
+  .about {
+    border-radius: 0 0 8px 0;
   }
 }
