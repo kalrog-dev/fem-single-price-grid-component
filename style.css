@@ -168,7 +168,6 @@ section {
   .grid-container {
     grid-template-columns: 1fr 1fr;
     max-width: 635px;
-    max-height: 475px;
   }
 
   section {
@@ -186,6 +185,7 @@ section {
   
   .header__subtitle {
     font-size: var(--fs-500);
+    margin-bottom: 0.6em;
   }
   
   .header__body {
@@ -194,6 +194,10 @@ section {
 
   .subscription {
     border-radius: 0 0 0 8px;
+  }
+
+  .subscription__cost {
+    line-height: 1.4;
   }
 
   .about {
